@@ -4,6 +4,7 @@ from constants import *
 from player import *
 from asteroid import *
 from asteroidfield import *
+from logger import log_state
 
 
 def main():
@@ -30,6 +31,7 @@ def main():
     time_clock = pygame.time.Clock()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     while True:
+        log_state()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
